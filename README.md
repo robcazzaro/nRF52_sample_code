@@ -1,7 +1,7 @@
 # nRF52_sample_code
 Various snippets of sample code for Nordic nRF52 devices
 
-# square_wave_comp
+# square_wave_comp.c
 I needed to generate a 10kHz sine wave as an excitation signal for a sensor, and read the phase difference caused by the sensor value. More info here https://devzone.nordicsemi.com/f/nordic-q-a/89121/measuring-phase-shift-of-a-10khz-analog-signal-need-help-getting-started and https://www.eevblog.com/forum/beginners/generating-a-good-enough-10khz-sine-wave-from-a-square-one/
 
 square_wave_comp is a sample program that generates a 10kHz square wave with a hardware timer and PPI, and uses the comparator to detect zero crossing. When detecting zero crossing, it uses PPI to capture the timer value in CC5. At any point in the code, CC5 contains the most recent value read.
